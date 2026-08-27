@@ -1,0 +1,1558 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>এলিড কোচিং সেন্টার | নওগাঁ</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Baloo+Da+2:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --purple:#5B2A87;
+  --purple-dark:#3D1B5C;
+  --green:#1C8A3C;
+  --red:#E8442A;
+  --gold:#FDB813;
+  --cream:#FBF7F1;
+  --ink:#241934;
+  --soft:#5a4d6b;
+  --line:#e7ddf0;
+  --white:#fff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Hind Siliguri',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+h1,h2,h3,h4,.brand{
+  font-family:'Baloo Da 2','Hind Siliguri',sans-serif;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+ul{
+  list-style:none;
+}
+
+.wrap{
+  max-width:1120px;
+  margin:auto;
+  padding:0 24px;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(251,247,241,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand-group{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+    width: 100px;;
+  /* height:45px; */
+  /*border-radius:50%;*/
+  /* background:linear-gradient(135deg,var(--purple),var(--red)); */
+  /* color:white; */
+  /* display:block; */
+  /* align-items:center; */
+  /* justify-content:center; */
+  /* font-size:22px; */
+  /* box-shadow:0 7px 20px rgba(91,42,135,.25);  */
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand{ 
+  font-size:21px;
+  font-weight:800;
+  color:var(--purple-dark);
+}
+
+.brand small{
+  display:block;
+  font-family:'Hind Siliguri';
+  font-size:11px;
+  color:var(--soft);
+  line-height:1;
+}
+
+nav.links{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+nav.links a{
+  font-size:15px;
+  font-weight:600;
+  position:relative;
+}
+
+nav.links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:var(--red);
+  transition:.3s;
+}
+
+nav.links a:hover::after{
+  width:100%;
+}
+
+.nav-cta{
+  background:var(--purple);
+  color:white;
+  padding:10px 19px;
+  border-radius:50px;
+  font-weight:700;
+}
+
+.nav-cta:hover{
+  background:var(--purple-dark);
+}
+
+.menu-btn{
+  display:none;
+  border:0;
+  background:none;
+  cursor:pointer;
+}
+
+.menu-btn span{
+  display:block;
+  width:26px;
+  height:3px;
+  margin:5px;
+  border-radius:5px;
+  background:var(--purple-dark);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,#fff,var(--cream));
+  padding:80px 20px;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:550px;
+  height:550px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--gold),transparent 65%);
+  opacity:.22;
+  bottom:-300px;
+}
+
+.hero-inner{
+  max-width:780px;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  display:inline-block;
+  background:white;
+  border:1px solid var(--line);
+  color:var(--purple);
+  padding:7px 17px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:22px;
+}
+
+.headline{
+  font-size:clamp(38px,6vw,64px);
+  line-height:1.2;
+  color:var(--purple-dark);
+  margin-bottom:20px;
+}
+
+.headline span{
+  color:var(--red);
+}
+
+.hero p{
+  color:var(--soft);
+  font-size:18px;
+  max-width:650px;
+  margin:auto;
+}
+
+.motto{
+  margin:18px 0 30px !important;
+  color:var(--green) !important;
+  font-weight:700;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 27px;
+  border-radius:50px;
+  font-weight:700;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.primary{
+  color:white;
+  background:var(--red);
+  box-shadow:0 10px 25px rgba(232,68,42,.3);
+}
+
+.outline{
+  background:white;
+  border:1.5px solid var(--purple);
+  color:var(--purple);
+}
+
+/* ================= COMMON ================= */
+
+section{
+  padding:80px 24px;
+}
+
+.section-head{
+  text-align:center;
+  max-width:650px;
+  margin:0 auto 50px;
+}
+
+.kicker{
+  color:var(--red);
+  font-weight:800;
+  letter-spacing:1px;
+  font-size:13px;
+}
+
+.section-head h2{
+  font-size:36px;
+  color:var(--purple-dark);
+  margin-top:6px;
+}
+
+.section-head p{
+  color:var(--soft);
+  margin-top:10px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  background:white;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.about-card{
+  background:linear-gradient(145deg,var(--purple),var(--purple-dark));
+  color:white;
+  padding:45px;
+  border-radius:25px;
+  position:relative;
+  overflow:hidden;
+}
+
+.about-card::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:var(--gold);
+  opacity:.2;
+  right:-70px;
+  top:-70px;
+}
+
+.about-card h3{
+  font-size:25px;
+  margin-bottom:15px;
+}
+
+.about-card p{
+  color:#eee3fa;
+}
+
+.about-text h3{
+  font-size:27px;
+  color:var(--purple-dark);
+  margin-bottom:12px;
+}
+
+.about-text p{
+  color:var(--soft);
+  margin-bottom:15px;
+}
+
+.checklist{
+  margin-top:20px;
+}
+
+.checklist li{
+  margin:10px 0;
+  display:flex;
+  gap:10px;
+}
+
+.checklist li::before{
+  content:"✓";
+  width:23px;
+  height:23px;
+  border-radius:50%;
+  background:#e7f6ea;
+  color:var(--green);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+}
+
+/* ================= COURSES ================= */
+
+.courses{
+  background:var(--cream);
+}
+
+.course-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.course-card{
+  background:white;
+  border:1px solid var(--line);
+  padding:28px 24px;
+  border-radius:20px;
+  transition:.25s;
+}
+
+.course-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 35px rgba(91,42,135,.13);
+}
+
+.course-icon{
+  width:55px;
+  height:55px;
+  border-radius:15px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:25px;
+  background:#f1eafb;
+  margin-bottom:18px;
+}
+
+.course-card h3{
+  font-size:19px;
+  margin-bottom:8px;
+}
+
+.course-card p{
+  color:var(--soft);
+  font-size:14px;
+}
+
+/* ================= TEACHERS ================= */
+
+.teachers{
+  background:white;
+}
+
+.teacher-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.teacher{
+  text-align:center;
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:30px 20px;
+  border-radius:22px;
+}
+
+.teacher-photo{
+  width:105px;
+  height:105px;
+  margin:auto;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--purple),var(--red));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:42px;
+  margin-bottom:15px;
+}
+
+.teacher h3{
+  color:var(--purple-dark);
+}
+
+.teacher p{
+  color:var(--soft);
+  font-size:14px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+  background:var(--cream);
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.why-item{
+  text-align:center;
+}
+
+.why-icon{
+  width:65px;
+  height:65px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--red));
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:27px;
+}
+
+.why-item h3{
+  font-size:18px;
+}
+
+.why-item p{
+  color:var(--soft);
+  font-size:14px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+  margin:0 24px;
+  padding:60px 25px;
+  text-align:center;
+  border-radius:28px;
+  color:white;
+  background:linear-gradient(120deg,var(--purple-dark),var(--purple));
+}
+
+.cta h2{
+  font-size:35px;
+}
+
+.cta p{
+  color:#e9def6;
+  margin:8px 0 25px;
+}
+
+/* ================= ADMISSION ================= */
+
+.admission{
+  background:white;
+}
+
+.admission-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+.info-box,
+.form-box{
+  padding:32px;
+  border-radius:22px;
+  border:1px solid var(--line);
+  background:var(--cream);
+}
+
+.info-box h3,
+.form-box h3{
+  color:var(--purple-dark);
+  font-size:23px;
+  margin-bottom:15px;
+}
+
+.info-box p{
+  color:var(--soft);
+  margin-bottom:15px;
+}
+
+.form-group{
+  margin-bottom:15px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:5px;
+  font-weight:600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:10px;
+  font-family:inherit;
+  background:white;
+  outline:none;
+}
+
+.form-group textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--purple);
+}
+
+.submit-btn{
+  width:100%;
+  border:0;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:16px;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+  background:var(--cream);
+}
+
+.faq-list{
+  max-width:800px;
+  margin:auto;
+}
+
+details{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin-bottom:12px;
+  padding:16px 20px;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:700;
+  color:var(--purple-dark);
+}
+
+details p{
+  color:var(--soft);
+  margin-top:10px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:white;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+
+.contact-card{
+  background:var(--cream);
+  border:1px solid var(--line);
+  padding:32px;
+  border-radius:22px;
+}
+
+.contact-card h3{
+  color:var(--purple-dark);
+  margin-bottom:20px;
+}
+
+.contact-row{
+  display:flex;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.contact-icon{
+  width:42px;
+  height:42px;
+  background:#f1eafb;
+  border-radius:11px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-shrink:0;
+}
+
+.contact-row strong{
+  display:block;
+}
+
+.contact-row span,
+.contact-row a{
+  color:var(--soft);
+  font-size:14px;
+}
+
+.map{
+  min-height:300px;
+  border-radius:22px;
+  overflow:hidden;
+  background:#eee;
+}
+
+.map iframe{
+  width:100%;
+  height:100%;
+  min-height:300px;
+  border:0;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:var(--purple-dark);
+  color:white;
+  padding:55px 24px 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:40px;
+  margin-bottom:40px;
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+footer h4{
+  margin-bottom:15px;
+}
+
+footer p,
+footer a{
+  color:#cdbfe3;
+  font-size:14px;
+}
+
+footer li{
+  margin-bottom:8px;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.15);
+  padding-top:20px;
+  text-align:center;
+  color:#b7a6d4;
+  font-size:13px;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float-btn{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:23px;
+  box-shadow:0 7px 20px rgba(0,0,0,.18);
+}
+
+.whatsapp{
+  background:#25D366;
+}
+
+.facebook{
+  background:#1877F2;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  nav.links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+    background:var(--cream);
+    padding:20px 25px;
+    flex-direction:column;
+    gap:15px;
+    border-bottom:1px solid var(--line);
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+  }
+
+  nav.links.active{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .nav-cta{
+    display:none;
+  }
+
+  .course-grid,
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .about-grid,
+  .admission-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .teacher-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  section{
+    padding:60px 18px;
+  }
+
+  .wrap{
+    padding:0 18px;
+  }
+
+  .hero{
+    min-height:590px;
+    padding:60px 18px;
+  }
+
+  .headline{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .section-head h2{
+    font-size:29px;
+  }
+
+  .course-grid,
+  .why-grid,
+  .teacher-grid,
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-card{
+    padding:30px;
+  }
+
+  .cta{
+    margin:0 18px;
+    padding:45px 20px;
+  }
+
+  .cta h2{
+    font-size:28px;
+  }
+
+  .brand{
+    font-size:18px;
+  }
+
+  .logo{
+    width:40px;
+    height:40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+  <div class="nav wrap">
+
+    <div class="brand-group">
+      <div class="logo"><img src="alid.png" alt="এলিড কোচিং"></div>
+
+      <div class="brand">
+        এলিড কোচিং
+        <small>নওগাঁ, বাংলাদেশ</small>
+      </div>
+    </div>
+
+    <nav class="links">
+      <a href="#home">হোম</a>
+      <a href="#about">আমাদের সম্পর্কে</a>
+      <a href="#courses">কোর্স</a>
+      <a href="#teachers">শিক্ষক</a>
+      <a href="#why">কেন আমরা</a>
+      <a href="#contact">যোগাযোগ</a>
+    </nav>
+
+    <a href="#admission" class="nav-cta">ভর্তি হোন</a>
+
+    <button class="menu-btn" aria-label="মেনু">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <span class="eyebrow">
+      ⭐ নওগাঁর বিশ্বস্ত কোচিং সেন্টার
+    </span>
+
+    <h1 class="headline">
+      প্রতিটি সকালে<br>
+      <span>নতুন জ্ঞানের</span> আলো
+    </h1>
+
+    <p>
+      এলিড কোচিং সেন্টারে আমরা শিক্ষার্থীদের
+      একাডেমিক সাফল্য, আত্মবিশ্বাস ও সুন্দর ভবিষ্যতের
+      জন্য প্রস্তুত করি।
+    </p>
+
+    <p class="motto">
+      “পড় তোমার প্রভুর নামে”
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#courses" class="btn primary">
+        কোর্সসমূহ দেখুন
+      </a>
+
+      <a href="#admission" class="btn outline">
+        ভর্তি তথ্য
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+  <div class="wrap about-grid">
+
+    <div class="about-card">
+      <h3>কেন এলিড?</h3>
+
+      <p>
+        প্রতিটি শিক্ষার্থীর শেখার গতি আলাদা।
+        সঠিক দিকনির্দেশনা, নিয়মিত অনুশীলন ও
+        শিক্ষকের যত্নের মাধ্যমে শিক্ষার্থীদের
+        সেরাটা বের করে আনাই আমাদের লক্ষ্য।
+      </p>
+    </div>
+
+    <div class="about-text">
+
+      <h3>আমাদের সম্পর্কে</h3>
+
+      <p>
+        এলিড কোচিং সেন্টার নওগাঁ এলাকার
+        শিক্ষার্থীদের জন্য একটি আধুনিক ও
+        শিক্ষাবান্ধব কোচিং প্রতিষ্ঠান।
+      </p>
+
+      <p>
+        ছোট ব্যাচ, নিয়মিত পরীক্ষা, মডেল টেস্ট
+        এবং শিক্ষার্থীর অগ্রগতির প্রতি বিশেষ
+        নজর দেওয়া হয়।
+      </p>
+
+      <ul class="checklist">
+        <li>অভিজ্ঞ ও যত্নশীল শিক্ষকমণ্ডলী</li>
+        <li>ছোট ব্যাচ ও ব্যক্তিগত মনোযোগ</li>
+        <li>নিয়মিত পরীক্ষা ও মডেল টেস্ট</li>
+        <li>অভিভাবকদের সাথে নিয়মিত যোগাযোগ</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= COURSES ================= -->
+
+<section class="courses" id="courses">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="kicker">কোর্সসমূহ</span>
+      <h2>যা যা পড়ানো হয়</h2>
+      <p>
+        শ্রেণি ও লক্ষ্য অনুযায়ী সাজানো কোর্সসমূহ
+      </p>
+    </div>
+
+    <div class="course-grid">
+
+      <div class="course-card">
+        <div class="course-icon">📘</div>
+        <h3>SSC / HSC প্রোগ্রাম</h3>
+        <p>
+          বিজ্ঞান, ব্যবসায় শিক্ষা ও মানবিক বিভাগের
+          জন্য পূর্ণাঙ্গ পাঠদান।
+        </p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🎓</div>
+        <h3>ভর্তি পরীক্ষা</h3>
+        <p>
+          বিশ্ববিদ্যালয় ও কলেজ ভর্তি পরীক্ষার
+          জন্য বিশেষ প্রস্তুতি ও মডেল টেস্ট।
+        </p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">🗣️</div>
+        <h3>ইংরেজি</h3>
+        <p>
+          Grammar, Writing, Speaking ও
+          Communication Skills উন্নয়নের কোর্স।
+        </p>
+      </div>
+
+      <div class="course-card">
+        <div class="course-icon">✏️</div>
+        <h3>প্রাথমিক ও মাধ্যমিক</h3>
+        <p>
+          ষষ্ঠ থেকে দশম শ্রেণি পর্যন্ত
+          ভিত্তি মজবুত করার পাঠদান।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TEACHERS ================= -->
+
+<section class="teachers" id="teachers">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="kicker">আমাদের শিক্ষক</span>
+      <h2>অভিজ্ঞ শিক্ষকমণ্ডলী</h2>
+      <p>
+        শিক্ষার্থীদের সঠিক দিকনির্দেশনায়
+        আমাদের শিক্ষকরা সর্বদা পাশে থাকেন।
+      </p>
+    </div>
+
+    <div class="teacher-grid">
+
+      <div class="teacher">
+        <div class="teacher-photo">👨‍🏫</div>
+        <h3>শিক্ষক ১</h3>
+        <p>বাংলা ও সাধারণ জ্ঞান</p>
+      </div>
+
+      <div class="teacher">
+        <div class="teacher-photo">👨‍🏫</div>
+        <h3>শিক্ষক ২</h3>
+        <p>ইংরেজি ও ভর্তি প্রস্তুতি</p>
+      </div>
+
+      <div class="teacher">
+        <div class="teacher-photo">👩‍🏫</div>
+        <h3>শিক্ষক ৩</h3>
+        <p>বিজ্ঞান ও গণিত</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why" id="why">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="kicker">কেন আমরা</span>
+      <h2>এলিড কোচিং যা দেয়</h2>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <div class="why-icon">👨‍🏫</div>
+        <h3>যত্নশীল শিক্ষক</h3>
+        <p>
+          শিক্ষার্থীর সমস্যা বুঝে
+          ব্যক্তিগতভাবে সহযোগিতা।
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">📝</div>
+        <h3>নিয়মিত পরীক্ষা</h3>
+        <p>
+          সাপ্তাহিক পরীক্ষা ও
+          ফলাফল পর্যালোচনা।
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🏫</div>
+        <h3>সুশৃঙ্খল পরিবেশ</h3>
+        <p>
+          পড়াশোনার জন্য শান্ত
+          ও সুন্দর পরিবেশ।
+        </p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🤝</div>
+        <h3>অভিভাবক যোগাযোগ</h3>
+        <p>
+          শিক্ষার্থীর অগ্রগতি নিয়ে
+          নিয়মিত আলোচনা।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<div class="cta">
+
+  <h2>নতুন ব্যাচে ভর্তি চলছে 🎓</h2>
+
+  <p>
+    আসন সংখ্যা সীমিত। আজই যোগাযোগ করুন।
+  </p>
+
+  <a href="#admission" class="btn primary">
+    ভর্তি আবেদন করুন
+  </a>
+
+</div>
+
+
+<!-- ================= ADMISSION ================= -->
+
+<section class="admission" id="admission">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="kicker">ভর্তি</span>
+      <h2>ভর্তি আবেদন করুন</h2>
+      <p>
+        নিচের ফর্মটি পূরণ করে আপনার তথ্য পাঠাতে পারেন।
+      </p>
+    </div>
+
+    <div class="admission-grid">
+
+      <div class="info-box">
+
+        <h3>ভর্তির সুবিধা</h3>
+
+        <p>✓ নিয়মিত ক্লাস</p>
+        <p>✓ সাপ্তাহিক পরীক্ষা</p>
+        <p>✓ মডেল টেস্ট</p>
+        <p>✓ দুর্বল শিক্ষার্থীদের বিশেষ সহযোগিতা</p>
+        <p>✓ অভিভাবকদের অগ্রগতি জানানো</p>
+
+        <br>
+
+        <p>
+          📞 ভর্তি সংক্রান্ত বিস্তারিত তথ্যের জন্য
+          সরাসরি আমাদের সাথে যোগাযোগ করুন।
+        </p>
+
+      </div>
+
+
+      <div class="form-box">
+
+        <h3>ভর্তি ফর্ম</h3>
+
+        <form id="admissionForm">
+
+          <div class="form-group">
+            <label>শিক্ষার্থীর নাম</label>
+            <input type="text" id="studentName" placeholder="নাম লিখুন" required>
+          </div>
+
+          <div class="form-group">
+            <label>মোবাইল নম্বর</label>
+            <input type="tel" id="phone" placeholder="01XXXXXXXXX" required>
+          </div>
+
+          <div class="form-group">
+            <label>শ্রেণি</label>
+
+            <select id="className" required>
+              <option value="">শ্রেণি নির্বাচন করুন</option>
+              <option>৬ষ্ঠ</option>
+              <option>৭ম</option>
+              <option>৮ম</option>
+              <option>৯ম</option>
+              <option>১০ম</option>
+              <option>SSC</option>
+              <option>HSC</option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+            <label>বিভাগ</label>
+
+            <select id="groupName">
+              <option value="">বিভাগ নির্বাচন করুন</option>
+              <option>বিজ্ঞান</option>
+              <option>মানবিক</option>
+              <option>ব্যবসায় শিক্ষা</option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+            <label>ঠিকানা</label>
+            <textarea id="address" placeholder="আপনার ঠিকানা লিখুন"></textarea>
+          </div>
+
+          <button type="submit" class="btn primary submit-btn">
+            ভর্তি আবেদন পাঠান
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="faq">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="kicker">FAQ</span>
+      <h2>সাধারণ প্রশ্ন</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>এলিড কোচিং কোথায় অবস্থিত?</summary>
+        <p>
+          এলিড কোচিং সেন্টার নওগাঁ, বাংলাদেশে অবস্থিত।
+        </p>
+      </details>
+
+      <details>
+        <summary>কোন কোন শ্রেণির শিক্ষার্থী ভর্তি হতে পারবে?</summary>
+        <p>
+          ষষ্ঠ থেকে দশম শ্রেণি এবং SSC/HSC শিক্ষার্থীদের
+          জন্য বিভিন্ন কোর্স রয়েছে।
+        </p>
+      </details>
+
+      <details>
+        <summary>ভর্তি হতে কী করতে হবে?</summary>
+        <p>
+          উপরের ভর্তি ফর্ম পূরণ করে আবেদন করতে পারবেন।
+          এরপর কোচিং কর্তৃপক্ষ আপনার সাথে যোগাযোগ করবে।
+        </p>
+      </details>
+
+      <details>
+        <summary>নিয়মিত পরীক্ষা নেওয়া হয় কি?</summary>
+        <p>
+          হ্যাঁ। নিয়মিত ক্লাস টেস্ট, সাপ্তাহিক পরীক্ষা
+          এবং মডেল টেস্টের ব্যবস্থা রয়েছে।
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+  <div class="wrap">
+
+    <div class="section-head">
+      <span class="kicker">যোগাযোগ</span>
+      <h2>আমাদের সাথে যোগাযোগ করুন</h2>
+      <p>
+        ভর্তি ও কোর্স সংক্রান্ত তথ্য জানতে যোগাযোগ করুন।
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+
+        <h3>যোগাযোগের তথ্য</h3>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">📍</div>
+
+          <div>
+            <strong>ঠিকানা</strong>
+            <span>নওগাঁ, বাংলাদেশ</span>
+          </div>
+
+        </div>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">📞</div>
+
+          <div>
+            <strong>মোবাইল</strong>
+            <a href="tel:01XXXXXXXXX">
+              01XXXXXXXXX
+            </a>
+          </div>
+
+        </div>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">📧</div>
+
+          <div>
+            <strong>ইমেইল</strong>
+            <span>আপনার ইমেইল এখানে দিন</span>
+          </div>
+
+        </div>
+
+        <div class="contact-row">
+
+          <div class="contact-icon">🕒</div>
+
+          <div>
+            <strong>ক্লাসের সময়</strong>
+            <span>সকাল ৮টা – রাত ৮টা</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="map">
+
+        <iframe
+          src="https://www.google.com/maps?q=Naogaon,Bangladesh&output=embed"
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>এলিড কোচিং সেন্টার</h3>
+
+        <p>
+          শিক্ষার্থীদের সাফল্য, আত্মবিশ্বাস ও
+          সুন্দর ভবিষ্যৎ গড়ার লক্ষ্যে আমরা কাজ করি।
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>দ্রুত লিংক</h4>
+
+        <ul>
+          <li><a href="#home">হোম</a></li>
+          <li><a href="#about">আমাদের সম্পর্কে</a></li>
+          <li><a href="#courses">কোর্স</a></li>
+          <li><a href="#admission">ভর্তি</a></li>
+          <li><a href="#contact">যোগাযোগ</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h4>যোগাযোগ</h4>
+
+        <p>📍 নওগাঁ, বাংলাদেশ</p>
+        <p>📞 01XXXXXXXXX</p>
+        <p>📧 আপনার ইমেইল</p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 এলিড কোচিং সেন্টার | সর্বস্বত্ব সংরক্ষিত
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= FLOATING BUTTONS ================= -->
+
+<div class="floating">
+
+  <a
+    href="https://wa.me/8801XXXXXXXXX"
+    class="float-btn whatsapp"
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+  <a
+    href="#contact"
+    class="float-btn facebook"
+    aria-label="Facebook">
+    f
+  </a>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector("nav.links");
+
+menuBtn.addEventListener("click", function(){
+
+  navLinks.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll("nav.links a").forEach(function(link){
+
+  link.addEventListener("click", function(){
+
+    navLinks.classList.remove("active");
+
+  });
+
+});
+
+
+document.getElementById("admissionForm").addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const name = document.getElementById("studentName").value;
+  const phone = document.getElementById("phone").value;
+  const className = document.getElementById("className").value;
+  const group = document.getElementById("groupName").value;
+  const address = document.getElementById("address").value;
+
+  const application = {
+    name: name,
+    phone: phone,
+    className: className,
+    group: group,
+    address: address,
+    date: new Date().toLocaleString("bn-BD")
+  };
+
+  let applications =
+    JSON.parse(localStorage.getItem("admissionApplications")) || [];
+
+  applications.push(application);
+
+  localStorage.setItem(
+    "admissionApplications",
+    JSON.stringify(applications)
+  );
+
+  alert(
+    "আপনার ভর্তি আবেদন সফলভাবে জমা হয়েছে।\n\n" +
+    "নাম: " + name +
+    "\nমোবাইল: " + phone +
+    "\nশ্রেণি: " + className
+  );
+
+  document.getElementById("admissionForm").reset();
+
+});
+
+</script>
+
+</body>
+</html>
+```
